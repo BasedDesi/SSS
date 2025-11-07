@@ -369,14 +369,8 @@ body {
         margin-left: 4px;
     }
 
-    /* improve server selected marker */
-    .pill_e5445c.wrapper__58105 {
-        width: calc((var(--custom-guild-list-padding) - 4px) / 2 + 4px);
     }
-    .item__58105 {
-        width: 4px;
-        border-radius: 4px;
-        margin-left: calc((var(--custom-guild-list-padding) - 4px) / 2);
+
     }
 
     /* improve embeds */
@@ -1436,21 +1430,15 @@ body {
     initial-value: custom;
 }
 
-@container body style(--custom-dms-icon: off) {
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 {
-        color: var(--dms-icon-color-before);
+
     }
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home']:hover > .childWrapper__6e9f8,
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home'].selected__6e9f8 > .childWrapper__6e9f8 {
-        color: var(--dms-icon-color-after);
+  
     }
 }
 
-@container body style(--custom-dms-icon: custom) {
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 > svg {
-        display: none;
+
     }
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8::before {
+  
         content: '';
         display: block;
         position: absolute;
@@ -1463,24 +1451,23 @@ body {
         mask-repeat: no-repeat;
         transition: background-color 0.15s ease-out;
     }
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home']:hover > .childWrapper__6e9f8::before {
+  
         transform: rotate(0deg) scale(1);
     }
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home']:hover > .childWrapper__6e9f8::before,
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home'].selected__6e9f8 > .childWrapper__6e9f8::before {
+ 
         background: var(--dms-icon-color-after);
         transform: rotate(-360deg) scale(0.8);
     }
 
     @container body style(--animations: on) {
-        .wrapper__6e9f8[data-list-item-id='guildsnav___home'] .childWrapper__6e9f8::before {
+ 
             transition: background-color 0.15s ease-out, transform var(--dms-icon-svg-transition);
         }
     }
 }
 
 @container body style(--custom-dms-icon: hide) {
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 > svg {
+
         display: none;
     }
 }
@@ -1492,7 +1479,7 @@ body {
 }
 
 @container body style(--custom-dms-background: image) {
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 {
+
         background-image: var(--dms-background-image-url);
         background-color: transparent !important;
         background-size: var(--dms-background-image-size);
@@ -1502,7 +1489,6 @@ body {
 }
 
 @container body style(--custom-dms-background: color) {
-    .wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 {
         background: var(--dms-background-color);
     }
 }
