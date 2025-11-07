@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-
+    container-name: root;
     --panel-backdrop-filter: none;
 
     --border-hover: var(--border-subtle);
@@ -19,14 +19,12 @@ body {
     --gap: 12px; /* spacing between panels */
     --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
     --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
-    --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2 + var(--border-thickness) * 2);
 
     --border-hover-transition: 0.2s ease;
 }
 
 .visual-refresh {
     /* panel separation */
-    .guilds__5e434 /* server list */, 
     .sidebarList__5e434 /* channel list (includes dm list) */,
     .panels__5e434 /* user panel */,
     .chat_f75fb0 > .subtitleContainer_f75fb0 /* chat titlebar */,
@@ -77,16 +75,6 @@ body {
         margin: 0 var(--gap) var(--gap) var(--gap);
     }
 
-    .guilds__5e434 /* server list */ {
-        margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--gap));
-        margin-right: var(--gap);
-    }
-    .guilds__5e434 + div:not(.sidebarList__5e434) /* betterfolders */ {
-        width: 100% !important;
-    }
-    .scroller_ef3116 /* server list inner scroller */ {
-        padding: var(--custom-guild-list-padding) 0;
-    }
     .folderGroup__48112 {
         width: 100%;
     }
@@ -334,8 +322,7 @@ body {
 
     .unreadMentionsIndicatorBottom_ef3116 /* server list new pill */,
     .unreadMentionsIndicatorTop_ef3116 {
-        width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2);
-        padding: calc(var(--custom-guild-list-padding) / 2);
+        
     }
 
     #vc-spotify-player /* vencord spotify plugin */ {
@@ -1554,10 +1541,6 @@ body {
             display: none;
         }
 
-        /* make server list inner scroll */
-        .stack_dbd263:not([id='guild-list-unread-dms']) {
-            overflow: hidden scroll;
-            scrollbar-width: none;
         }
         /* create space for inbox button */
         .tutorialContainer__1f388 {
@@ -1568,8 +1551,6 @@ body {
             position: fixed;
             width: 40px;
             height: 40px;
-            top: calc(var(--custom-app-top-bar-height) + 1px + var(--custom-guild-list-padding) + 48px);
-            left: calc(var(--gap) + 1px + var(--custom-guild-list-padding));
         }
         /* style inbox button */
         .recentsIcon_c99c29 .button__85643 {
@@ -1620,7 +1601,6 @@ body {
 
 @container body style(--top-bar-button-position: titlebar) {
     #app-mount {
-        --custom-channel-header-height: calc(var(--guildbar-avatar-size) + var(--space-xs) + var(--border-thickness) * 2);
         --top-bar-right-margin: calc(32px + var(--space-xs));
     }
 
@@ -1815,9 +1795,7 @@ body {
         .panels__5e434 /* user panel */ {
             right: 0;
             left: unset;
-            width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width));
         }
-        .guilds__5e434 /* server list */ {
             margin-bottom: 0;
         }
     }
